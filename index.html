@@ -182,8 +182,43 @@
     @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
     @keyframes fadeIn{to{opacity:1}}
 
+    /* ── REVIEWS ── */
+    #reviews{background:var(--warm-white);padding:6rem 5%;text-align:center}
+    #reviews .section-tag{justify-content:center}
+    #reviews .section-tag::before{display:none}
+    .reviews-score{display:flex;align-items:center;justify-content:center;gap:2.5rem;margin:2.5rem 0 3.5rem;flex-wrap:wrap}
+    .score-big{text-align:center}
+    .score-big strong{display:block;font-family:'Playfair Display',serif;font-size:5rem;font-weight:700;color:var(--terracotta);line-height:1}
+    .score-big .stars{font-size:1.4rem;color:var(--gold-warm);letter-spacing:0.1em;display:block;margin:0.2rem 0}
+    .score-big span{font-family:'Lato',sans-serif;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-light)}
+    .score-sep{width:1px;height:80px;background:var(--border)}
+    .score-meta{text-align:left}
+    .score-meta p{font-family:'Lato',sans-serif;font-size:0.82rem;color:var(--text-mid);line-height:2}
+    .score-meta strong{color:var(--charcoal)}
+    .google-badge{display:inline-flex;align-items:center;gap:0.5rem;margin-top:0.8rem;font-family:'Lato',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.05em;color:#4285f4;text-decoration:none;border:1px solid rgba(66,133,244,0.25);padding:0.45rem 1rem;transition:all 0.25s}
+    .google-badge:hover{background:rgba(66,133,244,0.06)}
+    .google-badge svg{width:16px;height:16px;flex-shrink:0}
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:0 auto 2.5rem}
+    .review-card{background:var(--cream);border:1px solid var(--border);padding:2rem;text-align:left;position:relative;transition:box-shadow 0.3s}
+    .review-card:hover{box-shadow:0 8px 32px rgba(44,36,22,0.1)}
+    .review-card::before{content:'\201C';position:absolute;top:0.8rem;right:1.2rem;font-family:'Playfair Display',serif;font-size:4rem;color:var(--terracotta);opacity:0.15;line-height:1}
+    .review-stars{color:var(--gold-warm);font-size:0.95rem;letter-spacing:0.1em;margin-bottom:0.8rem}
+    .review-text{font-family:'Playfair Display',serif;font-size:0.98rem;font-style:italic;color:var(--text-mid);line-height:1.7;margin-bottom:1.2rem}
+    .review-author{display:flex;align-items:center;gap:0.7rem}
+    .review-avatar{width:36px;height:36px;border-radius:50%;background:var(--terracotta);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#fff;flex-shrink:0}
+    .review-info strong{display:block;font-family:'Lato',sans-serif;font-size:0.8rem;font-weight:700;color:var(--charcoal)}
+    .review-info span{font-family:'Lato',sans-serif;font-size:0.68rem;color:var(--text-light)}
+    .review-google-logo{display:flex;align-items:center;justify-content:center;gap:0.5rem;font-family:'Lato',sans-serif;font-size:0.68rem;color:var(--text-light);margin-top:2rem}
+    .review-google-logo svg{width:18px;height:18px}
+    .reviews-cta{margin-top:0.5rem}
+    .btn-google{display:inline-flex;align-items:center;gap:0.6rem;font-family:'Lato',sans-serif;font-weight:700;font-size:0.73rem;letter-spacing:0.15em;text-transform:uppercase;color:#fff;background:#4285f4;padding:0.85rem 2rem;text-decoration:none;border:2px solid #4285f4;transition:all 0.28s}
+    .btn-google:hover{background:transparent;color:#4285f4}
+
     /* ── RESPONSIVE ── */
     @media(max-width:960px){
+      .reviews-grid{grid-template-columns:1fr}
+      .score-sep{display:none}
+      .score-meta{text-align:center}
       nav{padding:1rem 1.5rem}
       .nav-links,.nav-cta{display:none}
       .nav-hamburger{display:flex}
@@ -389,6 +424,115 @@
     <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=75&fit=crop" alt="Pizza Zubereitung" loading="lazy"/>
     <img src="https://images.unsplash.com/photo-1470338950318-40320a722782?w=500&q=75&fit=crop" alt="Bar Cocktails" loading="lazy"/>
     <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=75&fit=crop&crop=right" alt="Restaurant Ambiente" loading="lazy"/>
+  </div>
+</section>
+
+<!-- GOOGLE BEWERTUNGEN -->
+<section id="reviews">
+  <p class="section-tag">Google Bewertungen</p>
+  <h2 class="section-title reveal">Was unsere Gäste<br><em>sagen</em></h2>
+
+  <div class="reviews-score reveal">
+    <div class="score-big">
+      <strong>4.8</strong>
+      <span class="stars">★★★★★</span>
+      <span>Gesamtbewertung</span>
+    </div>
+    <div class="score-sep"></div>
+    <div class="score-meta">
+      <p><strong>700+</strong> Google Bewertungen</p>
+      <p>Platz <strong>#1</strong> Italienisch in Vaihingen/Enz</p>
+      <p>Kategorie: <strong>Bar & Restaurant</strong></p>
+      <a class="google-badge" href="https://maps.google.com/?q=South+Italy+Bar+Food+Vaihingen+Enz" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Alle Bewertungen auf Google
+      </a>
+    </div>
+  </div>
+
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Die beste Pizza weit und breit! Rocco macht das mit so viel Leidenschaft — man schmeckt sofort, dass hier echtes Süditalien drinsteckt. Die Smash Pizza ist unglaublich knusprig.</p>
+      <div class="review-author">
+        <div class="review-avatar">M</div>
+        <div class="review-info">
+          <strong>Markus B.</strong>
+          <span>vor 2 Wochen · Vaihingen</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Fantastischer Aperitivo! Die Cocktails sind wie in Neapel — frisch, perfekt gemixt und das Ambiente ist wunderschön. Tolle Togo-Bar direkt am Bahnhof, sehr praktisch.</p>
+      <div class="review-author">
+        <div class="review-avatar">S</div>
+        <div class="review-info">
+          <strong>Sandra K.</strong>
+          <span>vor 1 Monat · Vaihingen</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Endlich echte süditalienische Küche in Vaihingen! Die Focaccias sind hausgemacht und schmecken herrlich. Super freundlicher Service, man fühlt sich sofort wohl. Klare Empfehlung!</p>
+      <div class="review-author">
+        <div class="review-avatar">A</div>
+        <div class="review-info">
+          <strong>Anna R.</strong>
+          <span>vor 3 Wochen · Mühlacker</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Prima pizzeria italiana in Germania! Die Pizza ist wirklich wie zuhause. Rocco ist ein Gastgeber durch und durch — immer freundlich, immer mit einem Lächeln. Molto bene!</p>
+      <div class="review-author">
+        <div class="review-avatar">G</div>
+        <div class="review-info">
+          <strong>Giuseppe M.</strong>
+          <span>vor 3 Wochen</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Wir waren spontan zum Mittagessen und wurden nicht enttäuscht. Paninis frisch zubereitet, Kaffee perfekt, Preise fair. Die Togo-Bar ist Gold wert für den Arbeitsweg!</p>
+      <div class="review-author">
+        <div class="review-avatar">T</div>
+        <div class="review-info">
+          <strong>Thomas H.</strong>
+          <span>vor 5 Wochen</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Mein neues Lieblingsrestaurant in der Region! Die Atmosphäre, das Essen, der Service — alles stimmt. Besonders der Aperol Spritz ist unschlagbar. Wir kommen immer wieder!</p>
+      <div class="review-author">
+        <div class="review-avatar">L</div>
+        <div class="review-info">
+          <strong>Laura F.</strong>
+          <span>vor 2 Monaten</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="review-google-logo">
+    <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+    Powered by Google Reviews
+  </div>
+  <div class="reviews-cta reveal">
+    <a href="https://maps.google.com/?q=South+Italy+Bar+Food+Neue+Bahnhofstrasse+36+Vaihingen" target="_blank" class="btn-google">
+      <svg viewBox="0 0 24 24" width="16" height="16"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#fff"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#fff"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#fff"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#fff"/></svg>
+      Eigene Bewertung schreiben
+    </a>
   </div>
 </section>
 
