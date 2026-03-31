@@ -1,121 +1,131 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>South Italy Bar & Food – Vaihingen an der Enz</title>
-  <meta name="description" content="South Italy Bar & Food in Vaihingen an der Enz. Smash Pizza, Focaccias, Paninis, Cocktails & Kaffee. Authentisches Süditalien direkt am Bahnhof." />
-  <meta property="og:title" content="South Italy Bar & Food" />
-  <meta property="og:description" content="Authentisches Süditalien in Vaihingen an der Enz." />
-  <meta property="og:type" content="restaurant" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="South Italy Bar & Food in Vaihingen an der Enz. Smash Pizza, Focaccias, Paninis, Cocktails & Kaffee. Authentisches Süditalien direkt am Bahnhof."/>
+  <meta property="og:title" content="South Italy Bar & Food"/>
+  <meta property="og:description" content="Authentisches Süditalien in Vaihingen an der Enz."/>
+  <meta property="og:type" content="restaurant"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"South Italy Bar & Food","address":{"@type":"PostalAddress","streetAddress":"Neue Bahnhofstraße 36","addressLocality":"Vaihingen an der Enz","postalCode":"71665","addressCountry":"DE"},"telephone":"+4970423752283","servesCuisine":"Italian","priceRange":"€€"}</script>
   <style>
-    :root {
+    :root{
       --cream:#faf5ec;--warm-white:#fff9f2;--parchment:#f0e6d0;
       --terracotta:#c1440e;--terra-light:#e05a20;--terra-pale:#f5c4a8;
       --olive:#5c6b3a;--olive-light:#7a8f50;--olive-pale:#d4ddc0;
       --gold:#b5892a;--gold-warm:#d4a43a;
-      --charcoal:#2c2416;--brown:#5a3e28;
-      --text:#2c2416;--text-mid:#6b5a42;--text-light:#9c8668;
+      --charcoal:#2c2416;--text-mid:#6b5a42;--text-light:#9c8668;
       --border:rgba(181,137,42,0.22);
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+    body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--charcoal);overflow-x:hidden}
 
-    /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(250,245,236,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s}
-    nav.scrolled{box-shadow:0 2px 24px rgba(44,36,22,0.1)}
-    .nav-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--terracotta);text-decoration:none}
+    /* ── NAV ── */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(250,245,236,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s}
+    nav.scrolled{box-shadow:0 2px 20px rgba(44,36,22,0.12)}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--terracotta);text-decoration:none;letter-spacing:0.02em}
     .nav-logo span{color:var(--olive);font-weight:400;font-style:italic}
     .nav-links{display:flex;gap:2rem;list-style:none}
-    .nav-links a{font-family:'Lato',sans-serif;font-weight:400;font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;transition:color 0.25s}
+    .nav-links a{font-family:'Lato',sans-serif;font-weight:400;font-size:0.76rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;transition:color 0.25s}
     .nav-links a:hover{color:var(--terracotta)}
-    .nav-cta{font-family:'Lato',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:#fff;background:var(--terracotta);padding:0.6rem 1.5rem;text-decoration:none;transition:background 0.25s}
+    .nav-cta{font-family:'Lato',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:#fff;background:var(--terracotta);padding:0.6rem 1.4rem;text-decoration:none;transition:background 0.25s}
     .nav-cta:hover{background:var(--terra-light)}
     .nav-hamburger{display:none;cursor:pointer;flex-direction:column;gap:5px;background:none;border:none;padding:4px}
     .nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--charcoal)}
 
-    /* HERO */
-    #hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding-top:4.5rem;overflow:hidden;position:relative}
-    #hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 100% 50%,rgba(193,68,14,0.07) 0%,transparent 60%),radial-gradient(ellipse 50% 60% at 0% 20%,rgba(90,107,58,0.06) 0%,transparent 60%),linear-gradient(160deg,var(--warm-white) 0%,var(--cream) 60%,var(--parchment) 100%);z-index:0}
-    .hero-left{padding:5rem 3rem 5rem 5%;position:relative;z-index:1}
-    .hero-eyebrow{display:inline-flex;align-items:center;gap:0.7rem;font-family:'Lato',sans-serif;font-weight:400;font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive);margin-bottom:1.8rem;opacity:0;animation:fadeUp 0.9s ease forwards 0.3s}
-    .hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--olive)}
-    .hero-title{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,6.5rem);font-weight:700;line-height:1.05;color:var(--charcoal);opacity:0;animation:fadeUp 1s ease forwards 0.5s}
-    .hero-title .italy{display:block;color:var(--terracotta);font-style:italic}
-    .hero-title .bar{display:block;font-size:0.36em;font-weight:400;letter-spacing:0.35em;text-transform:uppercase;color:var(--olive);font-style:normal;margin-top:0.5em}
-    .hero-divider{display:flex;align-items:center;gap:0.8rem;margin:2rem 0;opacity:0;animation:fadeUp 1s ease forwards 0.7s}
-    .hero-divider span{width:44px;height:2px;background:var(--terracotta);display:block}
-    .hero-divider em{font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold)}
-    .hero-desc{font-family:'Playfair Display',serif;font-size:1.05rem;font-style:italic;line-height:1.8;color:var(--text-mid);max-width:400px;opacity:0;animation:fadeUp 1s ease forwards 0.9s}
-    .hero-buttons{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.5rem;opacity:0;animation:fadeUp 1s ease forwards 1.1s}
-    .btn-terra{font-family:'Lato',sans-serif;font-weight:700;font-size:0.74rem;letter-spacing:0.18em;text-transform:uppercase;color:#fff;background:var(--terracotta);padding:0.9rem 2rem;text-decoration:none;border:2px solid var(--terracotta);transition:all 0.28s}
-    .btn-terra:hover{background:transparent;color:var(--terracotta)}
-    .btn-olive{font-family:'Lato',sans-serif;font-weight:700;font-size:0.74rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--olive);background:transparent;padding:0.9rem 2rem;text-decoration:none;border:2px solid var(--olive);transition:all 0.28s}
-    .btn-olive:hover{background:var(--olive);color:#fff}
-    .hero-stats{display:flex;gap:2rem;margin-top:3rem;opacity:0;animation:fadeUp 1s ease forwards 1.3s}
-    .hero-stat strong{display:block;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--terracotta)}
-    .hero-stat span{font-family:'Lato',sans-serif;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-light)}
-    .stat-sep{width:1px;background:var(--border);align-self:stretch}
-
-    .hero-right{position:relative;z-index:1;height:100vh;min-height:600px;overflow:hidden}
+    /* ── HERO ── */
+    #hero{height:100vh;min-height:600px;position:relative;display:flex;align-items:center;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&q=80&fit=crop');background-size:cover;background-position:center;transition:transform 0.5s ease}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(20,12,5,0.75) 0%,rgba(20,12,5,0.45) 55%,rgba(193,68,14,0.15) 100%)}
+    /* Italian flag top stripe */
     .flag-stripe{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,#009246 33.3%,#fff 33.3%,#fff 66.6%,#ce2b37 66.6%);z-index:3}
-    .hero-scene{position:absolute;inset:0;background:linear-gradient(180deg,#fef6e8 0%,#f8e8d0 40%,#e8d4b4 100%);display:flex;align-items:center;justify-content:center}
-    .hero-deco-text{position:absolute;bottom:10%;left:50%;transform:translateX(-50%);font-family:'Playfair Display',serif;font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--brown);opacity:0.4;white-space:nowrap;z-index:2}
+    .hero-content{position:relative;z-index:2;padding:0 5%;max-width:680px}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:0.8rem;font-family:'Lato',sans-serif;font-weight:400;font-size:0.7rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold-warm);margin-bottom:1.8rem;opacity:0;animation:fadeUp 0.9s ease forwards 0.3s}
+    .hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold-warm)}
+    h1.hero-title{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,7vw,7rem);font-weight:700;line-height:1.0;color:#fff;opacity:0;animation:fadeUp 1s ease forwards 0.5s}
+    h1.hero-title .italy{display:block;color:var(--terra-pale);font-style:italic}
+    h1.hero-title .bar-tag{display:block;font-size:0.35em;font-weight:400;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold-warm);font-style:normal;margin-top:0.6em}
+    .hero-divider{display:flex;align-items:center;gap:0.8rem;margin:2rem 0;opacity:0;animation:fadeUp 1s ease forwards 0.7s}
+    .hero-divider span{width:44px;height:2px;background:var(--terra-pale);display:block}
+    .hero-divider em{font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--gold-warm)}
+    .hero-desc{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;line-height:1.8;color:rgba(255,255,255,0.85);max-width:480px;opacity:0;animation:fadeUp 1s ease forwards 0.9s}
+    .hero-buttons{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.5rem;opacity:0;animation:fadeUp 1s ease forwards 1.1s}
+    .btn-terra{font-family:'Lato',sans-serif;font-weight:700;font-size:0.73rem;letter-spacing:0.18em;text-transform:uppercase;color:#fff;background:var(--terracotta);padding:0.9rem 2rem;text-decoration:none;border:2px solid var(--terracotta);transition:all 0.28s}
+    .btn-terra:hover{background:transparent;color:var(--terra-pale)}
+    .btn-ghost{font-family:'Lato',sans-serif;font-weight:700;font-size:0.73rem;letter-spacing:0.18em;text-transform:uppercase;color:#fff;background:transparent;padding:0.9rem 2rem;text-decoration:none;border:2px solid rgba(255,255,255,0.45);transition:all 0.28s}
+    .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,0.1)}
+    .hero-stats{display:flex;gap:2rem;margin-top:3.5rem;opacity:0;animation:fadeUp 1s ease forwards 1.3s}
+    .hero-stat strong{display:block;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--gold-warm)}
+    .hero-stat span{font-family:'Lato',sans-serif;font-size:0.67rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55)}
+    .stat-sep{width:1px;background:rgba(255,255,255,0.2);align-self:stretch}
+    .hero-scroll{position:absolute;bottom:2rem;right:5%;z-index:2;display:flex;flex-direction:column;align-items:center;gap:0.5rem;opacity:0;animation:fadeIn 1s ease forwards 2s}
+    .hero-scroll span{font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.45);writing-mode:vertical-rl}
+    .scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,var(--gold-warm),transparent);animation:scrollPulse 2s ease-in-out infinite}
+    @keyframes scrollPulse{0%,100%{transform:scaleY(0.3);opacity:0.3}50%{transform:scaleY(1);opacity:1}}
 
-    /* SECTION COMMON */
+    /* ── SECTION COMMON ── */
     section{padding:6rem 5%}
     .section-tag{font-family:'Lato',sans-serif;font-size:0.67rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive);margin-bottom:0.7rem;display:flex;align-items:center;gap:0.7rem}
     .section-tag::before{content:'';display:block;width:22px;height:1.5px;background:var(--olive)}
-    .section-title{font-family:'Playfair Display',serif;font-size:clamp(2.1rem,4vw,3.3rem);font-weight:700;line-height:1.15;color:var(--charcoal)}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;line-height:1.15;color:var(--charcoal)}
     .section-title em{font-style:italic;color:var(--terracotta)}
 
-    /* ABOUT */
+    /* ── ABOUT ── */
     #about{background:var(--warm-white);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-    .about-visual{position:relative}
-    .about-img-frame{position:relative;background:var(--parchment);border:2px solid var(--terra-pale);height:480px;overflow:hidden}
-    .about-img-frame::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(to right,var(--terracotta),var(--terra-light),var(--terracotta));z-index:2}
-    .about-img-frame svg{width:100%;height:100%;display:block}
+    .about-img-wrap{position:relative}
+    .about-main-img{width:100%;height:500px;object-fit:cover;display:block;border:2px solid var(--terra-pale)}
+    .about-main-img::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,var(--terracotta),var(--terra-light),var(--terracotta))}
+    /* Red top accent line */
+    .about-img-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,var(--terracotta),var(--terra-light),var(--terracotta));z-index:2}
     .about-pull-quote{position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--terracotta);color:#fff;padding:1.5rem;max-width:180px}
     .about-pull-quote p{font-family:'Playfair Display',serif;font-size:0.9rem;font-style:italic;line-height:1.5}
-    .about-pull-quote cite{display:block;margin-top:0.5rem;font-family:'Lato',sans-serif;font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.8}
-    .about-body{font-family:'Lato',sans-serif;font-size:0.98rem;font-weight:300;line-height:1.9;color:var(--text-mid);margin:1.4rem 0}
+    .about-pull-quote cite{display:block;margin-top:0.5rem;font-family:'Lato',sans-serif;font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.85}
+    .about-body{font-family:'Lato',sans-serif;font-size:0.97rem;font-weight:300;line-height:1.9;color:var(--text-mid);margin:1.4rem 0}
     .about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
     .highlight{background:var(--cream);border-top:3px solid var(--terracotta);padding:1rem 1.2rem}
-    .highlight h4{font-family:'Playfair Display',serif;font-size:0.98rem;color:var(--charcoal);margin-bottom:0.3rem}
-    .highlight p{font-family:'Lato',sans-serif;font-size:0.74rem;color:var(--text-light);line-height:1.5}
+    .highlight h4{font-family:'Playfair Display',serif;font-size:0.97rem;color:var(--charcoal);margin-bottom:0.3rem}
+    .highlight p{font-family:'Lato',sans-serif;font-size:0.73rem;color:var(--text-light);line-height:1.5}
 
-    /* MENU */
-    #menu{background:var(--cream);text-align:center}
-    .menu-intro{max-width:560px;margin:0 auto 3.5rem}
-    .menu-intro .section-tag{justify-content:center}
-    .menu-intro .section-tag::before{display:none}
-    .menu-intro p{font-family:'Playfair Display',serif;font-size:1.05rem;font-style:italic;color:var(--text-mid);margin-top:1rem;line-height:1.7}
-    .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:0 auto}
-    .menu-card{background:var(--warm-white);border:1px solid var(--border);padding:2.5rem 2rem;text-align:left;position:relative;transition:transform 0.3s,box-shadow 0.3s;overflow:hidden}
-    .menu-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--terracotta),var(--terra-light));transform:scaleX(0);transform-origin:left;transition:transform 0.35s ease}
-    .menu-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(44,36,22,0.1)}
-    .menu-card:hover::after{transform:scaleX(1)}
-    .card-icon{width:48px;height:48px;background:var(--parchment);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1.2rem;border:1px solid var(--terra-pale)}
-    .menu-card h3{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--charcoal);margin-bottom:0.7rem}
-    .menu-card p{font-family:'Lato',sans-serif;font-size:0.8rem;font-weight:300;color:var(--text-mid);line-height:1.7}
-    .card-label{display:inline-block;margin-top:1.1rem;font-family:'Lato',sans-serif;font-size:0.64rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--terracotta);font-weight:700}
+    /* ── MENU PHOTO GRID ── */
+    #menu{background:var(--cream);padding:6rem 5%}
+    .menu-header{text-align:center;margin-bottom:3.5rem}
+    .menu-header .section-tag{justify-content:center}
+    .menu-header .section-tag::before{display:none}
+    .menu-header p{font-family:'Playfair Display',serif;font-size:1.05rem;font-style:italic;color:var(--text-mid);margin-top:0.8rem}
+    /* 2-row photo grid */
+    .menu-photo-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto;gap:1.5rem;max-width:1100px;margin:0 auto}
+    .menu-photo-card{position:relative;overflow:hidden;background:#000}
+    .menu-photo-card img{width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.5s ease,opacity 0.4s ease}
+    .menu-photo-card:hover img{transform:scale(1.07);opacity:0.85}
+    .menu-photo-card.featured{grid-column:span 2;grid-row:span 1}
+    .menu-photo-card.featured img{height:340px}
+    .card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,10,5,0.75) 0%,rgba(20,10,5,0.1) 60%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem}
+    .card-overlay h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:#fff;margin-bottom:0.3rem}
+    .card-overlay p{font-family:'Lato',sans-serif;font-size:0.75rem;font-weight:300;color:rgba(255,255,255,0.78);line-height:1.5}
+    .card-overlay .card-label{display:inline-block;margin-top:0.7rem;font-family:'Lato',sans-serif;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-warm);font-weight:700}
 
-    /* TOGO */
+    /* ── GALLERY STRIP ── */
+    #gallery{padding:0;overflow:hidden}
+    .gallery-strip{display:flex;gap:0;height:320px}
+    .gallery-strip img{width:20%;object-fit:cover;filter:saturate(1.1);transition:width 0.5s ease,filter 0.3s ease;cursor:pointer}
+    .gallery-strip img:hover{width:35%;filter:saturate(1.3)}
+
+    /* ── TOGO BAR ── */
     #togobar{background:linear-gradient(135deg,var(--olive) 0%,var(--olive-light) 100%);padding:5rem 5%;position:relative;overflow:hidden}
-    #togobar::before{content:'TOGO';position:absolute;right:-2%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;color:rgba(255,255,255,0.05);pointer-events:none}
+    #togobar::before{content:'TOGO';position:absolute;right:-2%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;color:rgba(255,255,255,0.05);pointer-events:none;white-space:nowrap}
     .togo-inner{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
     .togo-left .section-tag{color:var(--olive-pale)}
     .togo-left .section-tag::before{background:var(--olive-pale)}
     .togo-left .section-title{color:#fff}
     .togo-left .section-title em{color:var(--gold-warm)}
-    .togo-desc{font-family:'Lato',sans-serif;font-size:0.93rem;font-weight:300;color:rgba(255,255,255,0.8);line-height:1.8;margin:1.2rem 0 2rem;max-width:520px}
+    .togo-desc{font-family:'Lato',sans-serif;font-size:0.93rem;font-weight:300;color:rgba(255,255,255,0.82);line-height:1.8;margin:1.2rem 0 2rem;max-width:520px}
     .togo-pills{display:flex;flex-wrap:wrap;gap:0.6rem}
-    .pill{font-family:'Lato',sans-serif;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,0.35);padding:0.45rem 1rem;transition:all 0.25s}
+    .pill{font-family:'Lato',sans-serif;font-size:0.71rem;letter-spacing:0.1em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,0.35);padding:0.45rem 1rem;transition:all 0.25s}
     .pill:hover{background:rgba(255,255,255,0.15);border-color:#fff}
     .togo-right{text-align:center}
     .togo-phone{font-family:'Playfair Display',serif;font-size:1.5rem;font-style:italic;color:#fff;text-decoration:none;display:block;margin-bottom:1.2rem;transition:color 0.25s}
@@ -123,7 +133,7 @@
     .btn-white{font-family:'Lato',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--olive);background:#fff;padding:0.9rem 2rem;text-decoration:none;border:2px solid #fff;display:inline-block;transition:all 0.28s}
     .btn-white:hover{background:transparent;color:#fff}
 
-    /* HOURS */
+    /* ── HOURS & LOCATION ── */
     #hours{background:var(--parchment);display:grid;grid-template-columns:1fr 1fr;gap:5rem}
     .hours-table{margin-top:2rem}
     .hours-row{display:flex;justify-content:space-between;align-items:center;padding:0.9rem 0;border-bottom:1px solid rgba(181,137,42,0.15)}
@@ -134,14 +144,14 @@
     .address-card p{font-family:'Lato',sans-serif;font-size:0.93rem;line-height:2;color:var(--text-mid)}
     .address-card strong{color:var(--charcoal);font-weight:700}
     .contact-links{display:flex;flex-direction:column;gap:0.7rem;margin-top:1.5rem}
-    .contact-link{display:inline-flex;align-items:center;gap:0.7rem;font-family:'Lato',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;color:var(--terracotta);text-decoration:none;transition:color 0.25s}
+    .contact-link{display:inline-flex;align-items:center;gap:0.7rem;font-family:'Lato',sans-serif;font-size:0.82rem;font-weight:700;color:var(--terracotta);text-decoration:none;transition:color 0.25s}
     .contact-link:hover{color:var(--terra-light)}
     .contact-link svg{width:16px;height:16px;flex-shrink:0}
     .social-row{display:flex;gap:0.8rem;margin-top:1.5rem;flex-wrap:wrap}
     .social-btn{font-family:'Lato',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--olive);border:1.5px solid var(--olive);padding:0.5rem 1.1rem;text-decoration:none;transition:all 0.25s}
     .social-btn:hover{background:var(--olive);color:#fff}
 
-    /* CONTACT */
+    /* ── CONTACT ── */
     #contact{background:var(--charcoal);text-align:center;padding:5rem 5%}
     #contact .section-tag{justify-content:center;color:var(--olive-pale)}
     #contact .section-tag::before{background:var(--olive-pale)}
@@ -149,14 +159,14 @@
     #contact .section-title em{color:var(--terra-pale)}
     #contact>p{font-family:'Lato',sans-serif;font-size:0.88rem;font-weight:300;color:rgba(250,245,236,0.6);margin-bottom:2.5rem}
     .cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-    .btn-terra-inv{font-family:'Lato',sans-serif;font-weight:700;font-size:0.74rem;letter-spacing:0.18em;text-transform:uppercase;color:#fff;background:var(--terracotta);padding:0.9rem 2rem;text-decoration:none;border:2px solid var(--terracotta);transition:all 0.28s}
+    .btn-terra-inv{font-family:'Lato',sans-serif;font-weight:700;font-size:0.73rem;letter-spacing:0.18em;text-transform:uppercase;color:#fff;background:var(--terracotta);padding:0.9rem 2rem;text-decoration:none;border:2px solid var(--terracotta);transition:all 0.28s}
     .btn-terra-inv:hover{background:transparent;color:var(--terracotta)}
-    .btn-outline-light{font-family:'Lato',sans-serif;font-weight:700;font-size:0.74rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--cream);background:transparent;padding:0.9rem 2rem;text-decoration:none;border:2px solid rgba(250,245,236,0.35);transition:all 0.28s}
+    .btn-outline-light{font-family:'Lato',sans-serif;font-weight:700;font-size:0.73rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--cream);background:transparent;padding:0.9rem 2rem;text-decoration:none;border:2px solid rgba(250,245,236,0.35);transition:all 0.28s}
     .btn-outline-light:hover{border-color:var(--cream)}
-    .map-box{max-width:680px;margin:3rem auto 0;border:2px solid rgba(181,137,42,0.25);overflow:hidden}
+    .map-box{max-width:700px;margin:3rem auto 0;border:2px solid rgba(181,137,42,0.25);overflow:hidden}
     .map-box iframe{display:block;width:100%;height:260px;border:0}
 
-    /* FOOTER */
+    /* ── FOOTER ── */
     footer{background:#1e170f;padding:2.5rem 5%;display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;border-top:3px solid var(--terracotta)}
     .footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--terra-pale)}
     .footer-logo em{color:var(--gold-warm);font-style:italic}
@@ -165,34 +175,44 @@
     .footer-links a{font-family:'Lato',sans-serif;font-size:0.67rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.35);text-decoration:none;transition:color 0.25s}
     .footer-links a:hover{color:var(--terra-pale)}
 
-    /* REVEAL */
+    /* ── REVEAL ── */
     .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.75s ease,transform 0.75s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
 
     @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{to{opacity:1}}
 
+    /* ── RESPONSIVE ── */
     @media(max-width:960px){
       nav{padding:1rem 1.5rem}
       .nav-links,.nav-cta{display:none}
       .nav-hamburger{display:flex}
-      #hero{grid-template-columns:1fr;min-height:auto}
-      .hero-right{height:60vw;min-height:280px}
-      .hero-left{padding:6rem 1.5rem 3rem}
-      #about{grid-template-columns:1fr;gap:2.5rem;padding:4rem 5%}
+      #about{grid-template-columns:1fr;gap:2.5rem}
+      .about-main-img{height:320px}
       .about-pull-quote{display:none}
-      .about-img-frame{height:300px}
       .about-highlights{grid-template-columns:1fr}
-      .menu-grid{grid-template-columns:1fr 1fr}
+      .menu-photo-grid{grid-template-columns:1fr 1fr}
+      .menu-photo-card.featured{grid-column:span 2}
+      .gallery-strip{height:200px}
+      .gallery-strip img{width:33.3%}
+      .gallery-strip img:hover{width:45%}
       .togo-inner{grid-template-columns:1fr}
-      #hours{grid-template-columns:1fr;gap:3rem;padding:4rem 5%}
+      #hours{grid-template-columns:1fr;gap:3rem}
       footer{flex-direction:column;align-items:flex-start}
       .footer-info{text-align:left}
     }
-    @media(max-width:580px){.menu-grid{grid-template-columns:1fr}}
+    @media(max-width:580px){
+      .menu-photo-grid{grid-template-columns:1fr}
+      .menu-photo-card.featured{grid-column:span 1}
+      .gallery-strip{flex-direction:column;height:auto}
+      .gallery-strip img{width:100%;height:200px}
+      .gallery-strip img:hover{width:100%}
+    }
   </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav id="navbar">
   <a href="#hero" class="nav-logo">South <span>Italy</span> Bar & Food</a>
   <ul class="nav-links">
@@ -206,20 +226,23 @@
   <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
-<!-- HERO -->
+<!-- HERO – vollbild Restaurantfoto mit Overlay -->
 <section id="hero">
-  <div class="hero-left">
+  <div class="flag-stripe"></div>
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
     <p class="hero-eyebrow">Vaihingen an der Enz · Dal 2025</p>
     <h1 class="hero-title">
       South
       <span class="italy">Italy</span>
-      <span class="bar">Bar &amp; Food</span>
+      <span class="bar-tag">Bar &amp; Food</span>
     </h1>
     <div class="hero-divider"><span></span><em>✦</em><span></span></div>
     <p class="hero-desc">Il sapore autentico del Sud — Der echte Geschmack Süditaliens, direkt am Bahnhof Vaihingen an der Enz.</p>
     <div class="hero-buttons">
-      <a href="#menu" class="btn-terra">Speisekarte</a>
-      <a href="#contact" class="btn-olive">Lage & Kontakt</a>
+      <a href="#menu" class="btn-terra">Speisekarte entdecken</a>
+      <a href="#contact" class="btn-ghost">Lage & Kontakt</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat"><strong>2025</strong><span>Eröffnet</span></div>
@@ -229,213 +252,21 @@
       <div class="hero-stat"><strong>täglich</strong><span>Togo Bar</span></div>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="flag-stripe"></div>
-    <div class="hero-scene">
-      <svg viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
-        <defs>
-          <linearGradient id="sunsky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#ffe8c0"/><stop offset="50%" stop-color="#ffd090"/><stop offset="100%" stop-color="#f5b870"/>
-          </linearGradient>
-          <linearGradient id="gtable" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#d4a860"/><stop offset="100%" stop-color="#b88840"/>
-          </linearGradient>
-          <radialGradient id="gsun" cx="75%" cy="18%" r="25%">
-            <stop offset="0%" stop-color="#fff7d0"/><stop offset="40%" stop-color="#ffd878" stop-opacity="0.4"/><stop offset="100%" stop-color="#ffd090" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <rect width="500" height="600" fill="url(#sunsky)"/>
-        <rect width="500" height="600" fill="url(#gsun)"/>
-        <!-- Hills -->
-        <ellipse cx="100" cy="320" rx="180" ry="90" fill="#c8a86a" opacity="0.4"/>
-        <ellipse cx="400" cy="300" rx="160" ry="80" fill="#b89050" opacity="0.35"/>
-        <ellipse cx="250" cy="340" rx="250" ry="70" fill="#d4b478" opacity="0.5"/>
-        <!-- Church tower -->
-        <rect x="215" y="155" width="70" height="230" fill="#e8c080"/>
-        <rect x="255" y="155" width="30" height="230" fill="#c8a060" opacity="0.6"/>
-        <ellipse cx="235" cy="200" rx="10" ry="14" fill="#7a5030" opacity="0.5"/>
-        <ellipse cx="265" cy="200" rx="10" ry="14" fill="#7a5030" opacity="0.5"/>
-        <ellipse cx="235" cy="245" rx="10" ry="14" fill="#7a5030" opacity="0.5"/>
-        <ellipse cx="265" cy="245" rx="10" ry="14" fill="#7a5030" opacity="0.5"/>
-        <rect x="206" y="305" width="88" height="10" fill="#b88840"/>
-        <polygon points="250,132 295,315 205,315" fill="#c1440e"/>
-        <polygon points="250,132 272,315 228,315" fill="#a03010" opacity="0.4"/>
-        <line x1="250" y1="110" x2="250" y2="136" stroke="#7a3010" stroke-width="4" stroke-linecap="round"/>
-        <line x1="239" y1="118" x2="261" y2="118" stroke="#7a3010" stroke-width="4" stroke-linecap="round"/>
-        <!-- Left building -->
-        <rect x="55" y="240" width="135" height="145" fill="#e8c080"/>
-        <rect x="165" y="240" width="25" height="145" fill="#c8a050" opacity="0.5"/>
-        <rect x="47" y="226" width="151" height="18" fill="#c1440e"/>
-        <ellipse cx="82" cy="272" rx="11" ry="15" fill="#7a5030" opacity="0.45"/>
-        <ellipse cx="115" cy="272" rx="11" ry="15" fill="#7a5030" opacity="0.45"/>
-        <ellipse cx="148" cy="272" rx="11" ry="15" fill="#7a5030" opacity="0.45"/>
-        <ellipse cx="82" cy="315" rx="11" ry="15" fill="#7a5030" opacity="0.45"/>
-        <ellipse cx="115" cy="315" rx="11" ry="15" fill="#7a5030" opacity="0.45"/>
-        <rect x="79" y="258" width="3" height="28" fill="#5c6b3a" opacity="0.5"/>
-        <line x1="65" y1="335" x2="180" y2="335" stroke="#b88840" stroke-width="2"/>
-        <!-- Awning left -->
-        <path d="M52 385 L52 370 Q125 356 198 370 L198 385 Z" fill="#c1440e" opacity="0.9"/>
-        <line x1="78" y1="359" x2="73" y2="385" stroke="rgba(255,255,255,0.25)" stroke-width="10"/>
-        <line x1="112" y1="356" x2="107" y2="385" stroke="rgba(255,255,255,0.25)" stroke-width="10"/>
-        <line x1="148" y1="356" x2="143" y2="385" stroke="rgba(255,255,255,0.25)" stroke-width="10"/>
-        <line x1="182" y1="358" x2="178" y2="385" stroke="rgba(255,255,255,0.25)" stroke-width="10"/>
-        <!-- Sign -->
-        <rect x="78" y="371" width="106" height="16" rx="2" fill="#2c2416" opacity="0.75"/>
-        <text x="131" y="383" text-anchor="middle" font-family="serif" font-size="8" fill="#ffd090" letter-spacing="1.5">SOUTH ITALY</text>
-        <!-- Right building -->
-        <rect x="308" y="228" width="138" height="157" fill="#d4a860"/>
-        <rect x="308" y="228" width="22" height="157" fill="#b88840" opacity="0.35"/>
-        <rect x="300" y="216" width="154" height="16" fill="#c1440e"/>
-        <ellipse cx="336" cy="253" rx="11" ry="16" fill="#7a5030" opacity="0.5"/>
-        <ellipse cx="370" cy="253" rx="11" ry="16" fill="#7a5030" opacity="0.5"/>
-        <ellipse cx="404" cy="253" rx="11" ry="16" fill="#7a5030" opacity="0.5"/>
-        <ellipse cx="336" cy="298" rx="11" ry="16" fill="#7a5030" opacity="0.5"/>
-        <ellipse cx="370" cy="298" rx="11" ry="16" fill="#7a5030" opacity="0.5"/>
-        <ellipse cx="404" cy="298" rx="11" ry="16" fill="#7a5030" opacity="0.5"/>
-        <line x1="322" y1="328" x2="430" y2="328" stroke="#b88840" stroke-width="2"/>
-        <!-- Flags/bunting -->
-        <path d="M75 262 Q125 250 175 262" fill="none" stroke="#c1440e" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
-        <path d="M328 250 Q378 238 428 250" fill="none" stroke="#009246" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
-        <rect x="90" y="254" width="8" height="6" fill="#ce2b37" opacity="0.7"/>
-        <rect x="110" y="251" width="8" height="6" fill="#009246" opacity="0.7"/>
-        <rect x="130" y="254" width="8" height="6" fill="#fff" stroke="#ddd" stroke-width="0.5" opacity="0.6"/>
-        <rect x="150" y="251" width="8" height="6" fill="#ce2b37" opacity="0.7"/>
-        <!-- Ground piazza -->
-        <rect x="0" y="385" width="500" height="215" fill="url(#gtable)"/>
-        <line x1="0" y1="405" x2="500" y2="405" stroke="#a07030" stroke-width="0.7" opacity="0.5"/>
-        <line x1="0" y1="428" x2="500" y2="428" stroke="#a07030" stroke-width="0.7" opacity="0.4"/>
-        <line x1="0" y1="452" x2="500" y2="452" stroke="#a07030" stroke-width="0.7" opacity="0.4"/>
-        <line x1="60" y1="385" x2="60" y2="600" stroke="#a07030" stroke-width="0.7" opacity="0.4"/>
-        <line x1="130" y1="385" x2="130" y2="600" stroke="#a07030" stroke-width="0.7" opacity="0.4"/>
-        <line x1="200" y1="385" x2="200" y2="600" stroke="#a07030" stroke-width="0.7" opacity="0.4"/>
-        <line x1="260" y1="385" x2="260" y2="600" stroke="#a07030" stroke-width="0.7" opacity="0.4"/>
-        <line x1="330" y1="385" x2="330" y2="600" stroke="#a07030" stroke-width="0.7" opacity="0.4"/>
-        <line x1="400" y1="385" x2="400" y2="600" stroke="#a07030" stroke-width="0.7" opacity="0.4"/>
-        <line x1="455" y1="385" x2="455" y2="600" stroke="#a07030" stroke-width="0.7" opacity="0.4"/>
-        <!-- Fountain -->
-        <ellipse cx="250" cy="432" rx="45" ry="15" fill="#a07838" stroke="#c9a96e" stroke-width="1.5"/>
-        <rect x="242" y="416" width="16" height="20" fill="#b88840"/>
-        <ellipse cx="250" cy="416" rx="18" ry="6" fill="#c9a96e"/>
-        <ellipse cx="250" cy="430" rx="38" ry="10" fill="#7aa8c8" opacity="0.45"/>
-        <!-- Olive trees -->
-        <line x1="92" y1="440" x2="92" y2="368" stroke="#8a6040" stroke-width="5" stroke-linecap="round"/>
-        <ellipse cx="92" cy="352" rx="36" ry="44" fill="#5c6b3a"/>
-        <ellipse cx="74" cy="374" rx="22" ry="28" fill="#6b7a45"/>
-        <ellipse cx="112" cy="370" rx="20" ry="26" fill="#6b7a45"/>
-        <circle cx="84" cy="346" r="3" fill="#3a5020" opacity="0.7"/>
-        <circle cx="102" cy="358" r="3" fill="#3a5020" opacity="0.7"/>
-        <line x1="408" y1="440" x2="408" y2="362" stroke="#8a6040" stroke-width="5" stroke-linecap="round"/>
-        <ellipse cx="408" cy="346" rx="34" ry="42" fill="#5c6b3a"/>
-        <ellipse cx="390" cy="368" rx="20" ry="26" fill="#6b7a45"/>
-        <ellipse cx="428" cy="362" rx="18" ry="24" fill="#6b7a45"/>
-        <circle cx="400" cy="340" r="3" fill="#3a5020" opacity="0.7"/>
-        <!-- Cafe tables -->
-        <ellipse cx="162" cy="480" rx="18" ry="6" fill="#c9a96e"/>
-        <line x1="162" y1="475" x2="162" y2="498" stroke="#a07030" stroke-width="2"/>
-        <rect x="145" y="488" width="8" height="12" rx="2" fill="#b88840" opacity="0.7"/>
-        <rect x="170" y="488" width="8" height="12" rx="2" fill="#b88840" opacity="0.7"/>
-        <ellipse cx="338" cy="478" rx="18" ry="6" fill="#c9a96e"/>
-        <line x1="338" y1="473" x2="338" y2="496" stroke="#a07030" stroke-width="2"/>
-        <rect x="321" y="486" width="8" height="12" rx="2" fill="#b88840" opacity="0.7"/>
-        <rect x="346" y="486" width="8" height="12" rx="2" fill="#b88840" opacity="0.7"/>
-        <!-- Terracotta pots -->
-        <rect x="196" y="375" width="20" height="16" rx="3" fill="#c1440e" opacity="0.85"/>
-        <ellipse cx="206" cy="375" rx="10" ry="4" fill="#d4603a"/>
-        <ellipse cx="206" cy="370" rx="8" ry="6" fill="#5c6b3a"/>
-        <rect x="298" y="373" width="20" height="16" rx="3" fill="#c1440e" opacity="0.85"/>
-        <ellipse cx="308" cy="373" rx="10" ry="4" fill="#d4603a"/>
-        <ellipse cx="308" cy="368" rx="8" ry="6" fill="#5c6b3a"/>
-        <!-- Warm overlay -->
-        <rect width="500" height="600" fill="rgba(255,180,80,0.03)"/>
-      </svg>
-    </div>
-    <p class="hero-deco-text">Calabria · Sicilia · Puglia · Napoli</p>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scorri</span>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="about-visual reveal">
-    <div class="about-img-frame">
-      <svg viewBox="0 0 440 480" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="warmBg2" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#f5e8d0"/><stop offset="100%" stop-color="#e8d0b0"/>
-          </linearGradient>
-          <linearGradient id="tableT" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#d4b070"/><stop offset="100%" stop-color="#b89050"/>
-          </linearGradient>
-        </defs>
-        <rect width="440" height="480" fill="url(#warmBg2)"/>
-        <!-- Italian flag top -->
-        <rect x="0" y="0" width="440" height="6" fill="#009246"/>
-        <rect x="0" y="6" width="440" height="6" fill="#fff"/>
-        <rect x="0" y="12" width="440" height="6" fill="#ce2b37"/>
-        <!-- Wall lines -->
-        <line x1="0" y1="65" x2="440" y2="65" stroke="#d4b878" stroke-width="0.5" opacity="0.35"/>
-        <line x1="0" y1="125" x2="440" y2="125" stroke="#d4b878" stroke-width="0.5" opacity="0.35"/>
-        <line x1="110" y1="0" x2="110" y2="480" stroke="#d4b878" stroke-width="0.5" opacity="0.25"/>
-        <line x1="330" y1="0" x2="330" y2="480" stroke="#d4b878" stroke-width="0.5" opacity="0.25"/>
-        <!-- Window -->
-        <rect x="158" y="35" width="124" height="98" fill="#b0d0e8" rx="2"/>
-        <rect x="158" y="35" width="124" height="98" fill="none" stroke="#a07838" stroke-width="6" rx="2"/>
-        <line x1="220" y1="35" x2="220" y2="133" stroke="#a07838" stroke-width="4"/>
-        <line x1="158" y1="84" x2="282" y2="84" stroke="#a07838" stroke-width="4"/>
-        <!-- View outside -->
-        <ellipse cx="220" cy="67" rx="32" ry="36" fill="#5c7040" opacity="0.35"/>
-        <!-- Tile band -->
-        <rect x="0" y="196" width="440" height="22" fill="rgba(193,68,14,0.1)"/>
-        <!-- Table -->
-        <ellipse cx="220" cy="360" rx="162" ry="56" fill="url(#tableT)"/>
-        <!-- Tablecloth -->
-        <ellipse cx="220" cy="352" rx="155" ry="48" fill="#fff8f0" opacity="0.55"/>
-        <ellipse cx="220" cy="352" rx="155" ry="48" fill="none" stroke="#c1440e" stroke-width="1" stroke-dasharray="6,4" opacity="0.35"/>
-        <!-- Pizza -->
-        <ellipse cx="220" cy="332" rx="62" ry="20" fill="#f0f0e8" stroke="#d0c0a0" stroke-width="1.5"/>
-        <ellipse cx="220" cy="328" rx="55" ry="17" fill="#d4904a"/>
-        <ellipse cx="220" cy="328" rx="44" ry="13" fill="#c1440e" opacity="0.85"/>
-        <ellipse cx="220" cy="328" rx="37" ry="11" fill="#f5d875" opacity="0.8"/>
-        <line x1="220" y1="315" x2="220" y2="341" stroke="#c1440e" stroke-width="0.8" opacity="0.35"/>
-        <line x1="206" y1="318" x2="234" y2="338" stroke="#c1440e" stroke-width="0.8" opacity="0.35"/>
-        <line x1="234" y1="318" x2="206" y2="338" stroke="#c1440e" stroke-width="0.8" opacity="0.35"/>
-        <ellipse cx="210" cy="325" rx="6" ry="3" fill="#3d6b28" transform="rotate(-30,210,325)"/>
-        <ellipse cx="230" cy="322" rx="5" ry="2.5" fill="#3d6b28" transform="rotate(15,230,322)"/>
-        <ellipse cx="218" cy="334" rx="4" ry="2" fill="#3d6b28" transform="rotate(45,218,334)"/>
-        <text x="220" y="349" text-anchor="middle" font-family="serif" font-size="7.5" fill="#8a6030" font-style="italic">Smash Pizza</text>
-        <!-- Wine glass -->
-        <ellipse cx="128" cy="360" rx="18" ry="6" fill="#e8d8c0"/>
-        <line x1="128" y1="354" x2="128" y2="302" stroke="#c0a880" stroke-width="3" stroke-linecap="round"/>
-        <path d="M112 302 Q110 272 128 262 Q146 272 144 302 Z" fill="#d4b8a0" opacity="0.35"/>
-        <path d="M113 302 Q112 274 128 265 Q144 274 143 302" fill="none" stroke="#c0a880" stroke-width="1.5"/>
-        <path d="M116 297 Q115 280 128 276 Q141 280 140 297 Z" fill="#8b2030" opacity="0.55"/>
-        <line x1="119" y1="275" x2="121" y2="294" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
-        <!-- Bread basket -->
-        <ellipse cx="316" cy="352" rx="38" ry="12" fill="#e8d8b8"/>
-        <ellipse cx="316" cy="349" rx="32" ry="9" fill="#c8a860"/>
-        <ellipse cx="308" cy="344" rx="16" ry="8" fill="#d4904a" transform="rotate(-8,308,344)"/>
-        <ellipse cx="324" cy="342" rx="15" ry="7" fill="#c8803a" transform="rotate(5,324,342)"/>
-        <text x="316" y="362" text-anchor="middle" font-family="serif" font-size="7" fill="#8a6030" font-style="italic">Focaccia</text>
-        <!-- Candle -->
-        <rect x="194" y="272" width="6" height="30" fill="#f5f0e0" rx="3"/>
-        <ellipse cx="197" cy="267" rx="4" ry="7" fill="#ffa030" opacity="0.7"/>
-        <ellipse cx="197" cy="264" rx="2.5" ry="5" fill="#fff8c0" opacity="0.9"/>
-        <!-- Olive oil -->
-        <rect x="258" y="283" width="12" height="40" rx="4" fill="#c8d870" opacity="0.8"/>
-        <rect x="261" y="277" width="6" height="8" rx="2" fill="#a0a840"/>
-        <rect x="259" y="296" width="10" height="14" fill="#fff8e0" opacity="0.9" rx="1"/>
-        <text x="264" y="306" text-anchor="middle" font-family="serif" font-size="5" fill="#5c6b3a">OLIO</text>
-        <!-- Herb pot -->
-        <rect x="374" y="178" width="28" height="22" rx="3" fill="#c1440e" opacity="0.8"/>
-        <ellipse cx="388" cy="178" rx="14" ry="5" fill="#d4603a"/>
-        <ellipse cx="388" cy="172" rx="12" ry="8" fill="#5c6b3a"/>
-        <line x1="383" y1="165" x2="381" y2="175" stroke="#3d5020" stroke-width="1.5"/>
-        <line x1="388" y1="163" x2="388" y2="173" stroke="#3d5020" stroke-width="1.5"/>
-        <line x1="393" y1="165" x2="395" y2="175" stroke="#3d5020" stroke-width="1.5"/>
-        <!-- Background letter watermark -->
-        <text x="22" y="192" text-anchor="middle" font-family="serif" font-size="50" fill="#c1440e" opacity="0.06" font-style="italic">S</text>
-        <text x="418" y="192" text-anchor="middle" font-family="serif" font-size="50" fill="#5c6b3a" opacity="0.06" font-style="italic">I</text>
-      </svg>
-    </div>
+  <div class="about-img-wrap reveal">
+    <img
+      class="about-main-img"
+      src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&fit=crop&crop=center"
+      alt="Authentisch süditalienisches Restaurant Ambiente"
+      loading="lazy"
+    />
     <div class="about-pull-quote">
       <p>"La passione per il cibo autentico del Sud."</p>
       <cite>Rocco Larocca</cite>
@@ -444,31 +275,120 @@
   <div class="reveal">
     <p class="section-tag">La nostra storia</p>
     <h2 class="section-title">Il cuore del<br><em>Sud Italia</em></h2>
-    <p class="about-body">Rocco Larocca bringt die Seele Süditaliens direkt nach Vaihingen an der Enz. Was im April 2025 am Bahnhof eröffnete, ist mehr als ein Restaurant — es ist eine echte Begegnung mit Kalabrien, Sizilien und Kampanien.</p>
-    <p class="about-body">Handgemachte Focaccias, knusprige Smash Pizzas, echte Paninis — jedes Gericht zeugt von höchster Qualität und süditalienischer Lebensfreude. Dazu Cocktails wie in Neapel, Kaffee wie in Palermo.</p>
+    <p class="about-body">Rocco Larocca bringt die Seele Süditaliens direkt nach Vaihingen an der Enz. Was im April 2025 am Bahnhof eröffnete, ist mehr als ein Restaurant — eine echte Begegnung mit Kalabrien, Sizilien und Kampanien.</p>
+    <p class="about-body">Handgemachte Focaccias, knusprige Smash Pizzas, echte Paninis — jedes Gericht zeugt von höchster Qualität und süditalienischer Lebensfreude. Cocktails wie in Neapel, Kaffee wie in Palermo.</p>
     <div class="about-highlights">
       <div class="highlight"><h4>Smash Pizza</h4><p>Die knusprigste Pizza der Region — täglich frisch</p></div>
       <div class="highlight"><h4>Cocktail Bar</h4><p>Aperitivo & Cocktails nach süditalienischer Tradition</p></div>
       <div class="highlight"><h4>Togo Service</h4><p>Täglich verfügbar — direkt vom Bahnhof</p></div>
-      <div class="highlight"><h4>Frischetheke</h4><p>Täglich frische Zutaten, liebevoll ausgewählt</p></div>
+      <div class="highlight"><h4>Frischetheke</h4><p>Täglich frische, ausgewählte Zutaten</p></div>
     </div>
   </div>
 </section>
 
-<!-- MENU -->
+<!-- MENU PHOTO GRID -->
 <section id="menu">
-  <div class="menu-intro reveal">
+  <div class="menu-header reveal">
     <p class="section-tag">Cosa offriamo</p>
     <h2 class="section-title">Unsere <em>Spezialitäten</em></h2>
-    <p>Von Smash Pizza bis zum perfekten Aperitivo — alles mit Leidenschaft zubereitet, täglich frisch.</p>
+    <p>Von Smash Pizza bis zum perfekten Aperitivo — alles mit Leidenschaft, täglich frisch.</p>
   </div>
-  <div class="menu-grid">
-    <div class="menu-card reveal"><div class="card-icon">🍕</div><h3>Smash Pizza</h3><p>Dünn gepresste, knusprige Pizza nach süditalienischem Original — das Herzstück unserer Küche.</p><span class="card-label">Il nostro classico</span></div>
-    <div class="menu-card reveal"><div class="card-icon">🫓</div><h3>Focaccias</h3><p>Hausgemachte Focaccia mit frischen Belägen aus der Frischetheke — goldbraun, duftend, unwiderstehlich.</p><span class="card-label">Dal forno</span></div>
-    <div class="menu-card reveal"><div class="card-icon">🥖</div><h3>Paninis</h3><p>Knusprig gepresste Paninis mit ausgewählten, hochwertigen Zutaten — perfekt für unterwegs.</p><span class="card-label">Fatto a mano</span></div>
-    <div class="menu-card reveal"><div class="card-icon">☕</div><h3>Kaffee & Dolci</h3><p>Echter italienischer Espresso, Cappuccino und süße Köstlichkeiten aus der Frischetheke.</p><span class="card-label">Caffè italiano</span></div>
-    <div class="menu-card reveal"><div class="card-icon">🍹</div><h3>Cocktails</h3><p>Aperol Spritz, Negroni, Hugo und saisonale Kreationen — der perfekte Aperitivo!</p><span class="card-label">Aperitivo hour</span></div>
-    <div class="menu-card reveal"><div class="card-icon">🥤</div><h3>Softdrinks</h3><p>Erfrischende Getränke, hausgemachte Limonaden und mehr aus unserer Frischetheke.</p><span class="card-label">Freschi e naturali</span></div>
+
+  <div class="menu-photo-grid">
+    <!-- Featured: Smash Pizza -->
+    <div class="menu-photo-card featured reveal">
+      <img
+        src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=900&q=80&fit=crop"
+        alt="Smash Pizza süditalienisch"
+        loading="lazy"
+      />
+      <div class="card-overlay">
+        <h3>Smash Pizza</h3>
+        <p>Dünn gepresste, knusprige Pizza nach süditalienischem Original.</p>
+        <span class="card-label">Il nostro classico</span>
+      </div>
+    </div>
+
+    <!-- Focaccias -->
+    <div class="menu-photo-card reveal">
+      <img
+        src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=600&q=80&fit=crop"
+        alt="Hausgemachte Focaccia"
+        loading="lazy"
+      />
+      <div class="card-overlay">
+        <h3>Focaccias</h3>
+        <p>Hausgemacht, goldbraun, mit frischen Belägen.</p>
+        <span class="card-label">Dal forno</span>
+      </div>
+    </div>
+
+    <!-- Paninis -->
+    <div class="menu-photo-card reveal">
+      <img
+        src="https://images.unsplash.com/photo-1481070414801-51fd732d7184?w=600&q=80&fit=crop"
+        alt="Paninis frisch"
+        loading="lazy"
+      />
+      <div class="card-overlay">
+        <h3>Paninis</h3>
+        <p>Knusprig gepresst mit hochwertigen Zutaten — perfekt für unterwegs.</p>
+        <span class="card-label">Fatto a mano</span>
+      </div>
+    </div>
+
+    <!-- Cocktails -->
+    <div class="menu-photo-card featured reveal">
+      <img
+        src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=900&q=80&fit=crop"
+        alt="Cocktails Aperitivo Bar"
+        loading="lazy"
+      />
+      <div class="card-overlay">
+        <h3>Cocktails & Aperitivo</h3>
+        <p>Aperol Spritz, Negroni, Hugo und saisonale Kreationen — der perfekte Aperitivo!</p>
+        <span class="card-label">Aperitivo hour</span>
+      </div>
+    </div>
+
+    <!-- Kaffee -->
+    <div class="menu-photo-card reveal">
+      <img
+        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80&fit=crop"
+        alt="Italienischer Espresso Kaffee"
+        loading="lazy"
+      />
+      <div class="card-overlay">
+        <h3>Kaffee & Dolci</h3>
+        <p>Echter Espresso, Cappuccino und süße Köstlichkeiten.</p>
+        <span class="card-label">Caffè italiano</span>
+      </div>
+    </div>
+
+    <!-- Softdrinks -->
+    <div class="menu-photo-card reveal">
+      <img
+        src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=80&fit=crop"
+        alt="Softdrinks Limonaden frisch"
+        loading="lazy"
+      />
+      <div class="card-overlay">
+        <h3>Softdrinks</h3>
+        <p>Hausgemachte Limonaden und erfrischende Getränke.</p>
+        <span class="card-label">Freschi e naturali</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY STRIP -->
+<section id="gallery">
+  <div class="gallery-strip">
+    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&q=75&fit=crop" alt="Restaurant Atmosphäre" loading="lazy"/>
+    <img src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=500&q=75&fit=crop&crop=center" alt="Frische Zutaten" loading="lazy"/>
+    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=75&fit=crop" alt="Pizza Zubereitung" loading="lazy"/>
+    <img src="https://images.unsplash.com/photo-1470338950318-40320a722782?w=500&q=75&fit=crop" alt="Bar Cocktails" loading="lazy"/>
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=75&fit=crop&crop=right" alt="Restaurant Ambiente" loading="lazy"/>
   </div>
 </section>
 
@@ -480,8 +400,13 @@
       <h2 class="section-title">Die <em>Togo Bar</em></h2>
       <p class="togo-desc">Direkt am Bahnhof Vaihingen — kein besserer Ort für unsere Togo Bar. Täglich das volle Programm zum Mitnehmen. Schnell, frisch, süditalienisch.</p>
       <div class="togo-pills">
-        <span class="pill">Smash Pizza</span><span class="pill">Focaccias</span><span class="pill">Paninis</span>
-        <span class="pill">Kaffee</span><span class="pill">Cocktails</span><span class="pill">Softdrinks</span><span class="pill">Frischetheke</span>
+        <span class="pill">Smash Pizza</span>
+        <span class="pill">Focaccias</span>
+        <span class="pill">Paninis</span>
+        <span class="pill">Kaffee & Espresso</span>
+        <span class="pill">Cocktails</span>
+        <span class="pill">Softdrinks</span>
+        <span class="pill">Frischetheke</span>
       </div>
     </div>
     <div class="togo-right">
@@ -502,7 +427,7 @@
       <div class="hours-row"><span class="hday">Sonntag</span><span class="htime">ab 11:30 Uhr</span></div>
       <div class="hours-row"><span class="hday">Togo Bar</span><span class="htime">täglich offen</span></div>
     </div>
-    <p style="margin-top:1.2rem;font-family:'Lato';font-size:0.72rem;color:var(--text-light);line-height:1.6;">* Aktuelle Zeiten auf Instagram prüfen.</p>
+    <p style="margin-top:1.2rem;font-family:'Lato';font-size:0.72rem;color:var(--text-light);line-height:1.6;">* Aktuelle Öffnungszeiten können abweichen. Auf Instagram für Updates folgen.</p>
   </div>
   <div class="reveal">
     <p class="section-tag">Dove siamo</p>
@@ -519,7 +444,7 @@
     <div class="social-row">
       <a href="https://www.instagram.com/south__italy_bar_food" target="_blank" class="social-btn">Instagram</a>
       <a href="https://www.facebook.com/p/south-italy-barfood-61572578909148/" target="_blank" class="social-btn">Facebook</a>
-      <a href="https://maps.google.com/?q=Neue+Bahnhofstraße+36,+71665+Vaihingen" target="_blank" class="social-btn">Maps</a>
+      <a href="https://maps.google.com/?q=Neue+Bahnhofstraße+36,+71665+Vaihingen" target="_blank" class="social-btn">Google Maps</a>
     </div>
   </div>
 </section>
@@ -545,8 +470,17 @@
 </footer>
 
 <script>
+  // Nav scroll
   const nav = document.getElementById('navbar');
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+
+  // Hero parallax
+  const heroBg = document.getElementById('heroBg');
+  window.addEventListener('scroll', () => {
+    if(heroBg) heroBg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+  });
+
+  // Scroll reveal
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)} });
   }, {threshold:0.1});
