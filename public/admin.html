@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="theme-color" content="#0B0B0D">
+<title>Verwaltung · South Italy</title>
+<link rel="icon" href="assets/img/logo-south-italy-sm.png">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="top">
+  <img src="assets/img/logo-south-italy-sm.png" alt="South Italy" width="44" height="44">
+  <div class="top-title"><b>Verwaltung</b><span>Mittagstisch &amp; Special</span></div>
+  <button id="logout" class="link" hidden type="button">Abmelden</button>
+</header>
+
+<main>
+  <!-- Login -->
+  <section id="login" class="card" hidden>
+    <h1>Anmelden</h1>
+    <p class="muted">Bitte das Passwort eingeben.</p>
+    <form id="loginForm" autocomplete="on">
+      <label for="pw">Passwort</label>
+      <input id="pw" name="password" type="password" autocomplete="current-password" required maxlength="200">
+      <button class="btn" type="submit">Anmelden</button>
+      <p id="loginMsg" class="msg" role="alert"></p>
+    </form>
+  </section>
+
+  <!-- Admin -->
+  <section id="panel" hidden>
+    <p class="intro">Hier laden Sie die aktuelle Karte hoch – als <b>PDF</b> oder <b>Foto</b>. Sie erscheint sofort auf der Webseite. Alte Datei wird dabei ersetzt.</p>
+    <div id="slots"></div>
+  </section>
+
+  <p id="fatal" class="msg err" role="alert" hidden></p>
+</main>
+
+<template id="slotTpl">
+  <article class="card slot">
+    <div class="slot-head">
+      <h2></h2>
+      <span class="badge"></span>
+    </div>
+    <p class="muted hint"></p>
+
+    <div class="current" hidden>
+      <div class="thumb"></div>
+      <div class="current-info">
+        <b class="cur-title"></b>
+        <span class="cur-meta"></span>
+        <a class="cur-open" target="_blank" rel="noopener">Ansehen</a>
+      </div>
+    </div>
+
+    <form class="slot-form">
+      <label>Datei <small>(PDF, JPG, PNG oder WebP · max. 10 MB)</small></label>
+      <input class="f-file" type="file" accept="application/pdf,image/jpeg,image/png,image/webp,image/*">
+      <label>Titel <small>(optional, z. B. „Woche 46“)</small></label>
+      <input class="f-title" type="text" maxlength="80">
+      <div class="row">
+        <div><label>Gültig ab</label><input class="f-from" type="date"></div>
+        <div><label>Gültig bis</label><input class="f-to" type="date"></div>
+      </div>
+      <p class="muted tiny">Ohne Datum ist die Datei sofort und unbegrenzt sichtbar. Nach „Gültig bis“ verschwindet sie automatisch.</p>
+      <div class="actions">
+        <button class="btn save" type="submit">Hochladen &amp; veröffentlichen</button>
+        <button class="btn ghost del" type="button" hidden>Entfernen</button>
+      </div>
+      <progress class="prog" max="100" value="0" hidden></progress>
+      <p class="msg" role="status"></p>
+    </form>
+  </article>
+</template>
+
+<script src="admin.js" defer></script>
+</body>
+</html>

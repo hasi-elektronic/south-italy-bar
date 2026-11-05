@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+Disallow: /admin.html
+Disallow: /api/
+Disallow: /mittag/
+Sitemap: https://south-italy.pages.dev/sitemap.xml

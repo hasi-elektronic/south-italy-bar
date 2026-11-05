@@ -1,0 +1,18 @@
+name = "south-italy"
+pages_build_output_dir = "public"
+compatibility_date = "2026-10-01"
+
+# R2: hochgeladene Mittagstisch-Dateien (PDF/Bild)
+[[r2_buckets]]
+binding = "UPLOADS"
+bucket_name = "south-italy-uploads"
+
+# KV: Metadaten der Slots + Rate-Limit.
+# Namespace "south-italy-meta" (Account Hasi Elektronic).
+[[kv_namespaces]]
+binding = "META"
+id = "b225fe3ec5804158b7a8717f6b9d785d"
+
+# Secrets NICHT hier eintragen:
+#   lokal:   .dev.vars  (gitignored)
+#   Produktion: wrangler pages secret put ADMIN_PASSWORD / SESSION_SECRET
