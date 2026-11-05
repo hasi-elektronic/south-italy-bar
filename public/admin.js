@@ -232,7 +232,8 @@
     try {
       const s = await api("/api/login");
       if (!s.configured) {
-        el.fatal.textContent = "Der Admin-Bereich ist noch nicht eingerichtet (Passwort fehlt). Bitte Hamdi Bescheid geben.";
+        const d = s.diagnose || {};
+        el.fatal.textContent = "Der Admin-Bereich ist noch nicht eingerichtet" + (d.passwordSet === false ? " (ADMIN_PASSWORD fehlt)" : d.secretSet === false ? " (SESSION_SECRET fehlt)" : d.secretLongEnough === false ? " (SESSION_SECRET zu kurz, mind. 16 Zeichen)" : "") + ". Bitte Hamdi Bescheid geben.";
         el.fatal.hidden = false;
         return;
       }

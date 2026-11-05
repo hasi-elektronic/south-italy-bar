@@ -20,6 +20,11 @@ export function json(body, status = 200, extra = {}) {
   });
 }
 
+// Nur Ja/Nein-Hinweise für die Fehlersuche – niemals Werte oder Längen ausgeben.
+export function diagnose(env) {
+  return { passwordSet: Boolean(env.ADMIN_PASSWORD), secretSet: Boolean(env.SESSION_SECRET), secretLongEnough: Boolean(env.SESSION_SECRET && env.SESSION_SECRET.length >= 16) };
+}
+
 export function configured(env) {
   return Boolean(env.ADMIN_PASSWORD && env.SESSION_SECRET && env.SESSION_SECRET.length >= 16);
 }

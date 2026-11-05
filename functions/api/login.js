@@ -1,8 +1,8 @@
-import { json, configured, isAdmin, safeEqual, makeToken, sessionCookie, sameOrigin, clientIp, rlCount, rlFail, rlReset, RL_MAX, RL_WINDOW, SESSION_SECONDS } from "../_lib/auth.js";
+import { json, configured, diagnose, isAdmin, safeEqual, makeToken, sessionCookie, sameOrigin, clientIp, rlCount, rlFail, rlReset, RL_MAX, RL_WINDOW, SESSION_SECONDS } from "../_lib/auth.js";
 
 // GET  /api/login  -> { loggedIn: boolean }
 export async function onRequestGet({ request, env }) {
-  return json({ loggedIn: await isAdmin(request, env), configured: configured(env) });
+  return json({ loggedIn: await isAdmin(request, env), configured: configured(env), ...(configured(env) ? {} : { diagnose: diagnose(env) }) });
 }
 
 // POST /api/login  { password }  -> setzt HttpOnly-Cookie
