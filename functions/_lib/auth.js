@@ -22,7 +22,7 @@ export function json(body, status = 200, extra = {}) {
 
 // Nur Ja/Nein-Hinweise für die Fehlersuche – niemals Werte oder Längen ausgeben.
 export function diagnose(env) {
-  return { passwordSet: Boolean(env.ADMIN_PASSWORD), secretSet: Boolean(env.SESSION_SECRET), secretLongEnough: Boolean(env.SESSION_SECRET && env.SESSION_SECRET.length >= 16) };
+  return { passwordSet: Boolean(env.ADMIN_PASSWORD), secretSet: Boolean(env.SESSION_SECRET), secretLongEnough: Boolean(env.SESSION_SECRET && env.SESSION_SECRET.length >= 16), envKeys: Object.keys(env || {}).filter((k) => !k.startsWith('CF_')) };
 }
 
 export function configured(env) {
